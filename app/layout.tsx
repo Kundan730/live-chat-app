@@ -1,17 +1,40 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { Nunito } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+import ToasterContext from './context/ToasterContext';
+import AuthCotext from './context/AuthContext';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+// const nunito = Nunito({ subsets: ['latin'] });
+
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: ['300', '400', '500', '600', '700'],
+// });
 
 export const metadata = {
   title: 'Chat App',
   description: 'This is a live chat Application...',
 };
 
-export default function RootLayout({children,}: {children: React.ReactNode;}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AuthCotext>
+          <ToasterContext />
+          {children}
+        </AuthCotext>
+      </body>
     </html>
   );
 }
