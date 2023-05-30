@@ -16,7 +16,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
   const routes = useRoutes();
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(currentUser);
+  // console.log(currentUser);
 
   return (
     <div
@@ -31,6 +31,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       lg:overflow-y-auto 
       lg:bg-white 
       lg:border-r-[1px]
+      shadow-lg
       lg:pb-4
       lg:flex
       lg:flex-col
