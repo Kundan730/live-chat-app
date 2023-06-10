@@ -105,6 +105,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                 errors={errors}
                 required
                 register={register}
+                type=""
               />
               <div>
                 <label

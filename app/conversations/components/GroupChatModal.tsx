@@ -90,6 +90,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
                 disabled={isLoading}
                 required
                 errors={errors}
+                type=""
               />
               <Select
                 disabled={isLoading}
