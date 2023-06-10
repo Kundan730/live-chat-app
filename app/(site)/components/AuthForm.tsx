@@ -120,6 +120,8 @@ const AuthForm = () => {
               register={register}
               errors={errors}
               disabled={isLoading}
+              required
+              type=''
             />
           )}
           <Input
