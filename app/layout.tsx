@@ -4,6 +4,7 @@ import { Nunito } from 'next/font/google';
 import { Poppins } from 'next/font/google';
 import ToasterContext from './context/ToasterContext';
 import AuthCotext from './context/AuthContext';
+import ActiveStatus from './components/ActiveStatus';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthCotext>
           <ToasterContext />
+          <ActiveStatus />
           {children}
         </AuthCotext>
       </body>
