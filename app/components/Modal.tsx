@@ -57,20 +57,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             >
               <Dialog.Panel
                 className="
-                relative
-                transform
-                overflow-hidden
-                rounded-lg
-                bg-white
-                px-4
+                relative 
+                transform 
+                overflow-hidden 
+                rounded-lg 
+                bg-white 
+                px-4 
                 pb-4
-                text-left
-                shadow-xl
+                pt-5 
+                text-left 
+                shadow-xl 
                 transition-all
                 w-full
-                sm:my-8
-                sm:w-full
-                sm:max-w-lg
+                sm:my-8 
+                sm:w-full 
+                sm:max-w-lg 
                 sm:p-6
               "
               >
@@ -93,7 +94,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                     bg-white
                     text-gray-400
                     hover:text-gray-500
-                    focus:ooutline-none
+                    focus:outline-none
                     focus:ring-2
                     focus:ring-indigo-500
                     focus:ring-offset-2

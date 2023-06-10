@@ -104,7 +104,7 @@ const AuthForm = () => {
     >
       <div
         className="
-        bg-white
+        bg-cyan-50
         px-4
         py-8
         shadow
