@@ -42,7 +42,7 @@ export async function DELETE(
       },
     });
 
-    existingConversation.users.forEach((user: { email: any; }) => {
+    existingConversation.users.map((user: { email: any; }) => {
       if (user.email) {
         pusherServer.trigger(user.email, 'conversation:remove', existingConversation);
       }
