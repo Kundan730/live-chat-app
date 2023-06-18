@@ -104,12 +104,14 @@ const AuthForm = () => {
     >
       <div
         className="
-        bg-cyan-50
+        bg-cyan-100
         px-4
         py-8
-        shadow
+        shadow-xl
         sm:rounded-lg
         sm:px-10
+        backdrop-filter backdrop-blur-lg
+        bg-opacity-70
         "
       >
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
