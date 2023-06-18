@@ -94,7 +94,7 @@ const AuthForm = () => {
     <div
       className="
     mt-8
-    mx-7
+    mx-3
     sm:mx-auto
     sm:w-full
     sm:max-w-md
@@ -110,6 +110,7 @@ const AuthForm = () => {
         backdrop-filter backdrop-blur-lg
         bg-opacity-50
         sm:rounded-lg
+        rounded-lg
         "
       >
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
