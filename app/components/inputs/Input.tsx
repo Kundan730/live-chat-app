@@ -39,6 +39,7 @@ const Input: React.FC<InputProps> = ({
         className={clsx(
           `
           form-input
+          bg-cyan-50
           block
           w-full
           rounded-md

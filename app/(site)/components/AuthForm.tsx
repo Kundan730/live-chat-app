@@ -20,8 +20,8 @@ const AuthForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if(session?.status === 'authenticated') {
-      router.push('/users')
+    if (session?.status === 'authenticated') {
+      router.push('/users');
     }
   }, [session?.status, router]);
 
@@ -45,7 +45,6 @@ const AuthForm = () => {
     setIsLoading(true);
 
     if (variant === 'REGISTER') {
-
       // Axios Register
       axios
         .post('/api/register', data)
@@ -57,46 +56,45 @@ const AuthForm = () => {
     }
 
     if (variant === 'LOGIN') {
-
       // NextAuth SignIn
       signIn('credentials', {
         ...data,
         redirect: false,
-      }).then((callback) => {
-        if (callback?.error) {
-          toast.error('Invalid credentials');
-        }
-        if (callback?.ok && !callback?.error) {
-          toast.success('Logged in successfully');
-          router.push('/users');
-        }
       })
-      .finally(() => setIsLoading(false));
+        .then((callback) => {
+          if (callback?.error) {
+            toast.error('Invalid credentials');
+          }
+          if (callback?.ok && !callback?.error) {
+            toast.success('Logged in successfully');
+            router.push('/users');
+          }
+        })
+        .finally(() => setIsLoading(false));
     }
-  }
+  };
 
   const socialAction = (action: string) => {
     setIsLoading(true);
 
     //NextAuth Social Sign In
-    signIn(action, { redirect: false})
-    .then((callback) => {
-      if (callback?.error) {
-        toast.error('Something went wrong!');
-      }
-      if (callback?.ok && !callback?.error) {
-        toast.success('Logged in successfully');
-      }
-    })
-    .finally(() => setIsLoading(false));
-
-
+    signIn(action, { redirect: false })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error('Something went wrong!');
+        }
+        if (callback?.ok && !callback?.error) {
+          toast.success('Logged in successfully');
+        }
+      })
+      .finally(() => setIsLoading(false));
   };
 
   return (
     <div
       className="
     mt-8
+    mx-7
     sm:mx-auto
     sm:w-full
     sm:max-w-md
@@ -108,10 +106,10 @@ const AuthForm = () => {
         px-4
         py-8
         shadow-xl
-        sm:rounded-lg
         sm:px-10
         backdrop-filter backdrop-blur-lg
-        bg-opacity-70
+        bg-opacity-50
+        sm:rounded-lg
         "
       >
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -123,7 +121,7 @@ const AuthForm = () => {
               errors={errors}
               disabled={isLoading}
               required
-              type=''
+              type=""
             />
           )}
           <Input
@@ -154,7 +152,10 @@ const AuthForm = () => {
               <div className="w-full border-t border-gray-300" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="bg-white px-2 text-gray-500">
+              <span
+                className="bg-cyan-50 backdrop-filter backdrop-blur-lg
+        bg-opacity-30 px-2 text-gray-700"
+              >
                 Or continue with
               </span>
             </div>
