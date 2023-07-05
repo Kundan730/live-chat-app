@@ -48,7 +48,9 @@ const Button: React.FC<ButtonProps> = ({
           !danger &&
           'bg-sky-500 hover:bg-sky-600 focus-visible:outline-sky-600'
       )}
-    >{children}</button>
+    >
+      {children}
+    </button>
   );
 };
 

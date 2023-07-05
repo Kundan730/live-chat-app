@@ -1,23 +1,20 @@
-'use client'
+'use client';
 
-import { User } from "@prisma/client"
-import Image from "next/image";
+import { User } from '@prisma/client';
+import Image from 'next/image';
 
 interface AvatarGroupProps {
   users: User[];
 }
 
-const AvatarGroup: React.FC<AvatarGroupProps> = ({
-  users = []
-}) => {
-
+const AvatarGroup: React.FC<AvatarGroupProps> = ({ users = [] }) => {
   const slicedUsers = users.slice(0, 3);
 
   const positionMap = {
     0: 'top-0 left-[12px]',
     1: 'bottom-0',
-    2: 'bottom-0 right-0'
-  }
+    2: 'bottom-0 right-0',
+  };
 
   return (
     <div
@@ -48,7 +45,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default AvatarGroup
+export default AvatarGroup;

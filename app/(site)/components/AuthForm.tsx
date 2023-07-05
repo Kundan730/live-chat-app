@@ -153,9 +153,7 @@ const AuthForm = () => {
               <div className="w-full border-t border-gray-400" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span
-                className="bg-rose-50 rounded-lg px-2 text-gray-700"
-              >
+              <span className="bg-rose-50 rounded-lg px-2 text-gray-700">
                 Or continue with
               </span>
             </div>

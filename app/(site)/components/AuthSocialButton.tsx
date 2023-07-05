@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
 interface AuthSocialButtonProps {
   icon: IconType;
@@ -10,7 +10,7 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
   onClick,
 }) => {
   return (
-    <button 
+    <button
       onClick={onClick}
       type="button"
       className="
@@ -32,7 +32,7 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
     >
       <Icon />
     </button>
-  )
-}
+  );
+};
 
-export default AuthSocialButton
+export default AuthSocialButton;
