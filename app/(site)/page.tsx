@@ -26,12 +26,9 @@ export default function Home() {
 
         <h2 className="mt-6 text-center text-3xl text-gray-900">
           Rapid Chat App
-<<<<<<< HEAD
         </h2>
         <h2 className="mt-6 text-center text-3xl font-semibold text-gray-900">
           Sign in to your account
-=======
->>>>>>> ce15d5333d42eb80d96e659d0b6ed446d1d977be
         </h2>
           <h2 className='mt-6 text-center text-3xl font-semibold text-gray-900'>Sign in to your account</h2>
       </div>
